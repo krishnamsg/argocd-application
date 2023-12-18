@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-app-deployment
+spec:
+  replicas: 2  # Adjust the number of replicas as needed
+  selector:
+    matchLabels:
+      app: test-app
+  template:
+    metadata:
+      labels:
+        app: test-app
+    spec:
+      containers:
+        - name: test-container
+          image: krishnamsg/complete-prodcution-e2e-pipeline:1.0.0-40
+          ports:
+            - containerPort: 80  # Adjust the container port as needed
+
