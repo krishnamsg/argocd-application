@@ -8,7 +8,7 @@ spec:
   type: NodePort
   ports:
     - protocol: TCP
-      port: 80  # Expose the service on port 80
+      port: 8080  # Expose the service on port 80
       targetPort: 8080  # Point to the container port
-      nodePort: 30080  # Choose a NodePort value (30000-32767) or let Kubernetes assign one
+      nodePort: 30081  # Choose a NodePort value (30000-32767) or let Kubernetes assign one
 
